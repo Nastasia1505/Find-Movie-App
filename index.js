@@ -18,7 +18,7 @@ searchInput.addEventListener('keyup', () => {
 const API_URL = "https://www.omdbapi.com/";
 const API_KEY = "3ef4ab9e";
 
-function getMovie(movieName) {
+function getMovie(movieName,page) {
     // showPage(page);
     fetch(`${API_URL}?apiKey=${API_KEY}&s=${movieName}&page=${page}`)
         .then((response) => {
@@ -50,9 +50,10 @@ function showMovie(response) {
 
 nextPage.addEventListener('click', ()=>{
     console.log (page)
-    page++
+    page+=1
     movieList.innerHTML= '';
-   getMovie()
+    
+   getMovie(movieName,page)
 
 })
 // function resultText (movieName){
