@@ -2,6 +2,7 @@ const searchInput = document.querySelector('.search__input');
 const movieList = document.querySelector('.movies-list');
 const prevPage = document.querySelector('#prevPage');
 const nextPage = document.querySelector('#nextPage');
+
 let page = 1;
 let arr = [];
 
@@ -45,8 +46,14 @@ function showMovie(response) {
         `;
         movieList.appendChild(element);
     });
-    
-}
+    const arrows = document.querySelector('.arrows');
+    arrows.style.display = 'block'
+
+};
+
+movieInfo.addEventListener('click', ()=>{
+
+})
 
 nextPage.addEventListener('click', ()=>{
     console.log (page)

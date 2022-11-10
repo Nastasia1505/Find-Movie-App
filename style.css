@@ -70,7 +70,7 @@ h1 {
 
 
 .arrows {
-    display: block;
+    display: none;
     text-align: center;
     margin: auto;
 
